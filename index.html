@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script>
+function searchDoc(){
+    
+    var xmlhttp = new XMLHttpRequest();
+    var word = "definition";
+    xmlhttp.onreadystatechange = function(data) {
+    if (this.readyState == 4 && this.status == 200) {
+        window.alert(document.getElementById("define").innerHTML =
+      this.responseText);
+      
+    }
+        
+    };
+    
+     xmlhttp.open("GET", "request.php?q=" + word , true);
+     xmlhttp.send();
+}
+
+</script>
+</head>
+<body>
+<div id="define">
+<h1>Hello</h1>
+<button onclick="searchDoc()">Search</button>
+<br>
+
+
+</div>
+
+</body>
+</html>
