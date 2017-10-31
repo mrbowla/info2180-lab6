@@ -1,0 +1,12 @@
+body{
+    background-color: lightgrey;
+}
+h2{
+background-color: purple;
+padding:30px 35px;
+color: white;
+}
+#form{
+    padding: 10px;
+   border-bottom: 1.5px solid grey;
+}

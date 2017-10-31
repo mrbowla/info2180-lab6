@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
-<script>
-function searchDoc(){
-    
-    var xmlhttp = new XMLHttpRequest();
-    var word = "definition";
-    xmlhttp.onreadystatechange = function(data) {
-    if (this.readyState == 4 && this.status == 200) {
-        window.alert(document.getElementById("define").innerHTML =
-      this.responseText);
-      
-    }
-        
-    };
-    
-     xmlhttp.open("GET", "request.php?q=" + word , true);
-     xmlhttp.send();
-}
-
-</script>
+<title>Dictionary</title>
+<link rel="stylesheet" href="search.css"/>
+<script src="search.js"></script>
 </head>
 <body>
-<div id="define">
-<h1>Hello</h1>
-<button onclick="searchDoc()">Search</button>
-<br>
+<div id="Heading">
+<h2>Web Dictionary</h2>
+</div>
+<div id="form">
+Lookup the definition of a word (e.g. ajax, html, bar, php, javascript or css)
+<form action="#" method="get" name="search_form" id="search" class="form_class">
+    <label>Search :</label>
+    <input type="text" name="search" id="name" placeholder="Search" />
+    <input type="button" name="submit_search" id="btn_search" value="Search" onclick="searchDoc()"/>
+</form>
 
-
+</div>
+<h3>Result</h3>
+<div id="result">
+    
 </div>
 
 </body>
