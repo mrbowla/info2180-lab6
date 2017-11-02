@@ -10,3 +10,6 @@ color: white;
     padding: 10px;
    border-bottom: 1.5px solid grey;
 }
+input[type=button]{
+    background-color: lightblue;
+}
